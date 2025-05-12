@@ -57,8 +57,9 @@
 
       <button class="btn btn-outline-dark">Submit</button>
     </form>
+ <% } else { %>
+    <p>You need to be logged in to leave a review.</p>
   <% } %>
-
   <hr>
 
   <% if (listing.reviews.length > 0) { %>
@@ -99,4 +100,3 @@
     .bindPopup('THIS IS SIRSI')
     .openPopup();
 </script>
-
