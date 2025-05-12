@@ -92,9 +92,9 @@ app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
 // 404 Error handler
-app.all("*", (req, res, next) => {
+app.all(/.*/, (req, res, next) => {
     next(new ExpressError(404, "Page not found!"));
-});
+}); 
 
 // General Error Handler
 app.use((err, req, res, next) => {
