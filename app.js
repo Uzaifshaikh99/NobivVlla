@@ -55,7 +55,7 @@ store.on("error", (err) => {
 
 const sessionOptions = {
     store,
-    secret: process.env.secret,
+    secret: process.env.ATSLASDB_URL,
     resave: false,
     saveUninitialized: true,
     cookie: {
